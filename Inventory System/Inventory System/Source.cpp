@@ -132,7 +132,27 @@ int main()
 {
 	Menu();
 
-
-	return 0;
+	int numData = 0;
+	
+	Info arr[50];
+		
+	string name;
+	string object;
+	
+	ifstream inFile;
+	inFile.open("data.csv");
+	 
+	if(inFile.fail())
+	{
+		cout<<"error open data.csv";
+		exit (1);
+	}
+	
+	while (inFile>>names[numData])
+	{
+		inFile>>arr[numData].setName();
+		inFile>>arr[numData].setInfo();
+		numData++;
+	}
 }
 
